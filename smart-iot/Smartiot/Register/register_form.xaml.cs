@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Net.Http;
+using Smartiot.Login;
+using System.Net.Http.Headers;
+
+namespace Smartiot.Register
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class register_form : Window
+    {
+        public register_form()
+        {
+            InitializeComponent();
+
+            
+
+        }
+
+        private void btn_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("bye bye");           
+            System.Environment.Exit(1);
+        }
+
+        private void btn_min_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+
+        }
+
+        private void btn_register_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_login_page_Click(object sender, RoutedEventArgs e)
+        {
+
+            var loginpage = new login_form();
+            this.Close();
+            loginpage.Show();
+            
+        }
+    }
+    }
+

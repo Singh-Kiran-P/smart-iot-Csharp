@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace smart_iot.Properties
+namespace Smartiot.Properties
 {
 
 

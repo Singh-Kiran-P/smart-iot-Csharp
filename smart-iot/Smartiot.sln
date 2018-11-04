@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Blend for Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smart-iot", "smart-iot\smart-iot.csproj", "{D6DCFB75-8B4C-4009-9315-D979846EA65D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartiot", "Smartiot\Smartiot.csproj", "{CF24ACA8-F5CD-441A-8ECF-719C1180EA31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D6DCFB75-8B4C-4009-9315-D979846EA65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6DCFB75-8B4C-4009-9315-D979846EA65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6DCFB75-8B4C-4009-9315-D979846EA65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6DCFB75-8B4C-4009-9315-D979846EA65D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF24ACA8-F5CD-441A-8ECF-719C1180EA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF24ACA8-F5CD-441A-8ECF-719C1180EA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF24ACA8-F5CD-441A-8ECF-719C1180EA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF24ACA8-F5CD-441A-8ECF-719C1180EA31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3F43456E-CC49-4C00-9C17-8F77DBD9DC6E}
+		SolutionGuid = {02A2FA40-634B-41AD-8CCD-46B138A3AB4B}
 	EndGlobalSection
 EndGlobal
