@@ -30,6 +30,8 @@ namespace Smartiot.UI.Users
              *user_info[3] -->email
              */
             txt_username.Text = Login_process.user_info[1];
+            txt_id.Text = Login_process.user_info[1];
+            txt_.Text = Login_process.user_info[1];
 
         }
 
