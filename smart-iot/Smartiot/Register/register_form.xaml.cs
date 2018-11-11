@@ -45,13 +45,28 @@ namespace Smartiot.Register
 
         private void btn_register_Click(object sender, RoutedEventArgs e)
         {
+            string name, username, email, password, password2;
+            name = txt_name.Text;
+            username = txt_username.Text;
+            email = txt_email.Text;
+            password = pwd1.Password;
+            password2 = pwd2.Password;
+
+            if (password == password2)
+            {
+                Register_process register_Process = new Register_process(name, email, username, password, password2);
+                MessageBox.Show("Successfully Registered");
+
+            }
+            else
+            {
+                MessageBox.Show("Password does not match the confirm password.");
+            }
+
+
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void btn_login_page_Click(object sender, RoutedEventArgs e)
         {

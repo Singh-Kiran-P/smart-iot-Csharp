@@ -43,7 +43,7 @@ namespace Smartiot.Login
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             username = txt_username.Text;
-            string password = txt_password.Text;
+            string password = pwdbox_password.Password;
             Login_process login_Process= new Login_process(username, password);
             if (login_Process.succes =="true")
             {

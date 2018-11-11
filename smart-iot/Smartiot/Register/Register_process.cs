@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Smartiot.UI;
+using Smartiot.Login;
 
 
 
@@ -14,13 +15,17 @@ namespace Smartiot.Register
 {
     class Register_process
     {
+
+        public string username = "";
+        public string succes = "";
+
         public Register_process(string name, string email, string username, string password, string password2)
         {
             try
             {
 
 
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/users/register");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/api/users/register");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
@@ -37,35 +42,38 @@ namespace Smartiot.Register
                     streamWriter.Close();
                 }
 
-                //var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                //using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                //{
-                //    var result = streamReader.ReadToEnd();
-                //    var jss = new JavaScriptSerializer();
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    var jss = new JavaScriptSerializer();
 
-                //    Dictionary<string, string> sData = jss.Deserialize<Dictionary<string, string>>(result);
-                //    strid = sData["id"].ToString();
-                //    username = sData["username"].ToString();
-                //    email = sData["email"].ToString();
-                //    succes = sData["succes"].ToString();
+                    Dictionary<string, string> sData = jss.Deserialize<Dictionary<string, string>>(result);
 
-                //    if (succes == "true")
-                //    {
-                //        Mainpage UI_mainpage = new Mainpage();
-                //        UI_mainpage.Show();
-                //    }
-                //    return;
+                    username = sData["username"].ToString();
+                    succes = sData["succes"].ToString();
+
+                    if (succes == "true")
+                    {
+                        login_form login_Form = new login_form();
+                        register_form register_Form =new register_form();
+                        register_Form.Close();
+                        login_Form.Show();
+                    }
+                    return;
 
 
 
-                //}
+                }
             }
             catch (Exception ex)
             {
-                //succes = "false";
-
-
+                succes = "false";
+                Console.WriteLine(ex);
             }
         }
+
+
+
     }
-} 
+}
