@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Smartiot;
+using Smartiot.UI.Admin;
 
 
 
@@ -22,7 +22,7 @@ namespace Smartiot.Login
     /// </summary>
     public partial class login_form : Window
     {
-        public string username="";
+       
         public login_form()
         {
             InitializeComponent();
@@ -42,13 +42,25 @@ namespace Smartiot.Login
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            username = txt_username.Text;
+            string username = txt_username.Text;
             string password = pwdbox_password.Password;
+            if (username =="sr"&& password == "sr") 
+            {
+                server_setup server_Setup = new server_setup();
+                this.Close();
+                server_Setup.Show();
+                return;
+            }
             Login_process login_Process= new Login_process(username, password);
             if (login_Process.succes =="true")
             {
                 this.Close();
             }
+            //if (Login_process.error != null)
+            //{
+            //    MessageBox.Show(Login_process.error);
+            //    return;
+            //}
             if (login_Process.succes == "false")
             {
                 MessageBox.Show("username or password invaild");

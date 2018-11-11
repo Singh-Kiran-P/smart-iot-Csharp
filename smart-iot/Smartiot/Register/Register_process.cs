@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using Smartiot.UI;
+using Smartiot.UI.Admin;
 using Smartiot.Login;
 
 
@@ -24,8 +24,8 @@ namespace Smartiot.Register
             try
             {
 
-
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/api/users/register");
+                string server_url = server_setup.serverurl;
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url+"api/users/register");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
@@ -55,21 +55,18 @@ namespace Smartiot.Register
 
                     if (succes == "true")
                     {
-                        login_form login_Form = new login_form();
-                        register_form register_Form =new register_form();
-                        register_Form.Close();
+                        login_form login_Form = new login_form();                      
+                        
                         login_Form.Show();
                     }
                     return;
-
-
-
                 }
             }
             catch (Exception ex)
             {
                 succes = "false";
                 Console.WriteLine(ex);
+                return;
             }
         }
 

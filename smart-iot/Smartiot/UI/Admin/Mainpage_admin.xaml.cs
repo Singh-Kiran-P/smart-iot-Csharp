@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Smartiot.Login;
 
-namespace Smartiot.UI.Users
+namespace Smartiot.UI.Admin
 {
     /// <summary>
     /// Interaction logic for Mainpage.xaml
     /// </summary>
-    public partial class Mainpage : Window
+    public partial class Mainpage_admin : Window
     {
-        public Mainpage()
+        public Mainpage_admin()
         {
             InitializeComponent();
 
@@ -28,10 +28,12 @@ namespace Smartiot.UI.Users
              *user_info[1] -->name
              *user_info[2] -->username
              *user_info[3] -->email
+             *user_info[4] -->role
              */
             txt_name.Text = Login_process.user_info[1];
             txt_id.Text = Login_process.user_info[0];
             txt_email.Text = Login_process.user_info[3];
+            txt_role.Text = Login_process.user_info[4];
 
         }
 

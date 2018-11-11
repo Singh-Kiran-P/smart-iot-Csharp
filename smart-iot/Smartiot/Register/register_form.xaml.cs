@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Net.Http;
 using Smartiot.Login;
 using System.Net.Http.Headers;
+using System.Text.RegularExpressions;
 
 namespace Smartiot.Register
 {
@@ -25,10 +26,7 @@ namespace Smartiot.Register
     {
         public register_form()
         {
-            InitializeComponent();
-
-            
-
+            InitializeComponent();       
         }
 
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
@@ -51,16 +49,33 @@ namespace Smartiot.Register
             email = txt_email.Text;
             password = pwd1.Password;
             password2 = pwd2.Password;
+            bool check_email = !Regex.IsMatch(email, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
 
-            if (password == password2)
-            {
-                Register_process register_Process = new Register_process(name, email, username, password, password2);
-                MessageBox.Show("Successfully Registered");
+            if (password == password2 &&check_email != true )
+            {                
+               MessageBoxResult boxResult= MessageBox.Show("Successfully Registered");
+                if (boxResult == MessageBoxResult.OK)
+                {
+                    Register_process register_Process = new Register_process(name, email, username, password, password2);
+                    this.Close();
+
+                }
 
             }
             else
             {
-                MessageBox.Show("Password does not match the confirm password.");
+                if (check_email)
+                {
+                    MessageBox.Show("Invaild Email");
+                    return;
+
+                }
+                if (password != password2)
+                {
+                    MessageBox.Show("Password does not match the confirm password.");
+                    return;
+
+                }
             }
 
 
@@ -76,6 +91,8 @@ namespace Smartiot.Register
             loginpage.Show();
             
         }
+
+
     }
     }
 

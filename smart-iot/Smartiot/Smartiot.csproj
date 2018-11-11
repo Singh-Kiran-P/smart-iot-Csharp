@@ -68,6 +68,12 @@
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register\Register_process.cs" />
+    <Compile Include="UI\Admin\Mainpage_admin.xaml.cs">
+      <DependentUpon>Mainpage_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\server_setup.xaml.cs">
+      <DependentUpon>server_setup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Users\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,14 @@
     <Page Include="Register\register_form.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admin\Mainpage_admin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Admin\server_setup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\Users\Mainpage.xaml">
       <SubType>Designer</SubType>
@@ -114,8 +128,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

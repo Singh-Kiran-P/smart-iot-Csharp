@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Smartiot.UI.Users;
+using Smartiot.UI.Admin;
 namespace Smartiot.Login
 {
 
@@ -16,25 +17,27 @@ namespace Smartiot.Login
         public string username = "";
         public string name = "";
         public string email = "";
+        public string role = "";
         public string succes = "";
-        public static List<string> user_info=new List<string>();
+        public static string error = "";
+        public static List<string> user_info = new List<string>();
 
 
         public Login_process()
-        {       
+        {
 
 
-        }             
+        }
 
-        
+
 
         public Login_process(string usernaam, string password)
         {
             try
             {
 
-
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost/api/users/login");
+                string server_url = server_setup.serverurl;
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/login");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
 
@@ -59,6 +62,7 @@ namespace Smartiot.Login
                     name = sData["name"].ToString();
                     username = sData["username"].ToString();
                     email = sData["email"].ToString();
+                    role = sData["role"].ToString().ToLower(); 
                     succes = sData["succes"].ToString();
 
                     if (succes == "true")
@@ -67,9 +71,20 @@ namespace Smartiot.Login
                         user_info.Add(name);
                         user_info.Add(username);
                         user_info.Add(email);
+                        user_info.Add(role);
 
-                        Mainpage UI_mainpage = new Mainpage();
-                        UI_mainpage.Show();
+                        if (role == "admin")
+                        {
+                            Mainpage_admin UI_Mainpage_admin = new Mainpage_admin();
+                            UI_Mainpage_admin.Show();
+
+                        }
+                        if (role == "normal")
+                        {
+                            Mainpage UI_mainpage = new Mainpage();
+                            UI_mainpage.Show();
+                        }
+
                     }
                     return;
 
@@ -79,6 +94,7 @@ namespace Smartiot.Login
             }
             catch (Exception ex)
             {
+                error = ex.ToString();
                 succes = "false";
 
 
