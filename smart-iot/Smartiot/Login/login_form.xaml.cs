@@ -37,7 +37,7 @@ namespace Smartiot.Login
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("bye bye");
-            System.Environment.Exit(1);
+            System.Environment.Exit(1); 
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
