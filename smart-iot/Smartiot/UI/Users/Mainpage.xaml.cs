@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Smartiot.Login;
 
-namespace Smartiot.UI
+namespace Smartiot.UI.Users
 {
     /// <summary>
     /// Interaction logic for Mainpage.xaml
@@ -23,16 +23,25 @@ namespace Smartiot.UI
         public Mainpage()
         {
             InitializeComponent();
-            //var loginform = new login_form();
-            //txt_username.Text = loginform.username;
+
+            /*user_info[0] -->id
+             *user_info[1] -->name
+             *user_info[2] -->username
+             *user_info[3] -->email
+             */
+            txt_username.Text = Login_process.user_info[1];
 
         }
 
         private void btn_logout_Click(object sender, RoutedEventArgs e)
         {
+            Login_process.user_info.Clear();
             var loginpage = new login_form();
             this.Close();
+            MessageBox.Show("Logout successfully ");
             loginpage.Show();
+
         }
+
     }
 }
