@@ -14,10 +14,9 @@
         <Label x:Name="label_Copy2" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="474,55,0,0"/>
         <Label x:Name="label" Content="Id:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,4,0,0"/>
         <Label x:Name="label_Copy1" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="474,29,0,0"/>
-        <Button x:Name="btn_Led_on" Content="LED ON" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btn_Led_off" Content="LED OFF" HorizontalAlignment="Left" Margin="90,141,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_Led_on" Content="LED ON" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Width="75" Click="btn_Led_on_Click"/>
+        <Button x:Name="btn_Led_off" Content="LED OFF" HorizontalAlignment="Left" Margin="90,141,0,0" VerticalAlignment="Top" Width="75" Click="btn_Led_off_Click"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="126" Margin="10,10,0,0" VerticalAlignment="Top" Width="459" Loaded="Img_Loaded"/>
-        <Label x:Name="label_Copy" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="474,55,0,0"/>
         <TextBox x:Name="txt_role" HorizontalAlignment="Left" Height="20" Margin="518,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
         <Label x:Name="label_Copy3" Content="role:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="474,81,0,0"/>
         <Button x:Name="button" Content="ADMIN" HorizontalAlignment="Left" Margin="62,35,0,0" VerticalAlignment="Top" Width="212" Height="49"/>

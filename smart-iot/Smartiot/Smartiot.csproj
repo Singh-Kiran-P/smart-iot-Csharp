@@ -68,6 +68,7 @@
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
     <Compile Include="Register\Register_process.cs" />
+    <Compile Include="UI\Admin\IOT\LED\LED.cs" />
     <Compile Include="UI\Admin\Mainpage_admin.xaml.cs">
       <DependentUpon>Mainpage_admin.xaml</DependentUpon>
     </Compile>

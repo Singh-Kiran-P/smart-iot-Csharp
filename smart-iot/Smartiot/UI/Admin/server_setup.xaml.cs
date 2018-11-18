@@ -23,7 +23,7 @@ namespace Smartiot.UI.Admin
         {
             InitializeComponent();
         }
-        public static string serverurl = "http://localhost/";
+        public static string serverurl = "http://192.168.0.198/";
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
             serverurl = "http://" + txt_url.Text+"/";

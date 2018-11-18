@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Smartiot.Login;
+using Smartiot.UI.Admin.IOT;
 
 namespace Smartiot.UI.Admin
 {
@@ -62,5 +63,16 @@ namespace Smartiot.UI.Admin
             */
         }
 
+        private void btn_Led_on_Click(object sender, RoutedEventArgs e)
+        {
+            LED.led_on();
+
+        }
+
+        private void btn_Led_off_Click(object sender, RoutedEventArgs e)
+        {
+            LED.led_off();
+
+        }
     }
 }
