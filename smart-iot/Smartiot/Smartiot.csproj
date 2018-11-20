@@ -60,14 +60,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Login\login_form.xaml.cs">
+    <Compile Include="Auth\Login\login_form.xaml.cs">
       <DependentUpon>login_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login\Login_process.cs" />
-    <Compile Include="Register\register_form.xaml.cs">
+    <Compile Include="Auth\Login\Login_process.cs" />
+    <Compile Include="Auth\Register\register_form.xaml.cs">
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Register\Register_process.cs" />
+    <Compile Include="Auth\Register\Register_process.cs" />
+    <Compile Include="Models\Auth\Login\Login_Obj.cs" />
+    <Compile Include="Models\Auth\Register\Register_Obj.cs" />
+    <Compile Include="Models\Auth\User.cs" />
     <Compile Include="UI\Admin\IOT\LED\LED.cs" />
     <Compile Include="UI\Admin\Mainpage_admin.xaml.cs">
       <DependentUpon>Mainpage_admin.xaml</DependentUpon>
@@ -78,7 +81,7 @@
     <Compile Include="UI\Users\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Login\login_form.xaml">
+    <Page Include="Auth\Login\login_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,7 +89,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Register\register_form.xaml">
+    <Page Include="Auth\Register\register_form.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
