@@ -6,12 +6,12 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using Smartiot.UI.Admin;
-using Smartiot.Login;
+
+using Smartiot.Views.Auth.Login;
 
 
 
-namespace Smartiot.Register
+namespace Smartiot.Views.Auth.Register
 {
     class Register_process
     {
@@ -24,7 +24,7 @@ namespace Smartiot.Register
             try
             {
 
-                string server_url = server_setup.serverurl;
+                string server_url = Server.Rest_API.serverurl;
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url+"api/users/register");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";

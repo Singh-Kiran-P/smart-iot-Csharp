@@ -1,7 +1,7 @@
 ﻿<Application x:Class="Smartiot.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Login/login_form.xaml">
+             StartupUri="Views\Auth\Login\login_form.xaml">
     <Application.Resources>
          
     </Application.Resources>

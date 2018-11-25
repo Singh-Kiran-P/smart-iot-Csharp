@@ -6,9 +6,11 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using Smartiot.UI.Users;
-using Smartiot.UI.Admin;
-namespace Smartiot.Login
+using Smartiot.Views.UI.Users.Admin;
+using Smartiot.Views.UI.Users.NormalUsers;
+
+
+namespace Smartiot.Views.Auth.Login
 {
 
     class Login_process
@@ -36,7 +38,7 @@ namespace Smartiot.Login
             try
             {
 
-                string server_url = server_setup.serverurl;
+                string server_url = Server.Rest_API.serverurl;
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/login");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";

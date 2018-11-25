@@ -11,10 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Smartiot.Login;
-using Smartiot.UI.Admin.IOT;
+using Smartiot.Controls.IOT.LED;
 
-namespace Smartiot.UI.Admin
+using Smartiot.Views.Auth.Login;
+
+namespace Smartiot.Views.UI.Users.Admin
 {
     /// <summary>
     /// Interaction logic for Mainpage.xaml

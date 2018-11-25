@@ -11,11 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Smartiot.UI.Admin;
+using Smartiot.Views.UI.Users.Admin;
 
 
 
-namespace Smartiot.Login
+namespace Smartiot.Views.Auth.Login
 {
     /// <summary>
     /// Interaction logic for login_form.xaml
@@ -46,7 +46,7 @@ namespace Smartiot.Login
             string password = pwdbox_password.Password;
             if (username =="sr"&& password == "sr") 
             {
-                server_setup server_Setup = new server_setup();
+                Views.Dialog.server_setup server_Setup = new Views.Dialog.server_setup();                
                 this.Close();
                 server_Setup.Show();
                 return;

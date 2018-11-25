@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Smartiot.UI.Admin.IOT
+namespace Smartiot.Controls.IOT.LED
 {
     class LED
     {
@@ -17,7 +17,7 @@ namespace Smartiot.UI.Admin.IOT
             {
 
 
-                string server_url = server_setup.serverurl;
+                string server_url = Server.Rest_API.serverurl;
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/iot/led");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
@@ -53,7 +53,7 @@ namespace Smartiot.UI.Admin.IOT
         {
             try
             {
-                string server_url = server_setup.serverurl;
+                string server_url = Server.Rest_API.serverurl;
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/iot/led");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";

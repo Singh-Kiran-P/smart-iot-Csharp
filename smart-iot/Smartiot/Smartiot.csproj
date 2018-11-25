@@ -60,28 +60,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Auth\Login\login_form.xaml.cs">
+    <Compile Include="Server\Rest_API.cs" />
+    <Compile Include="Views\Auth\Login\login_form.xaml.cs">
       <DependentUpon>login_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Auth\Login\Login_process.cs" />
-    <Compile Include="Auth\Register\register_form.xaml.cs">
+    <Compile Include="Views\Auth\Login\Login_process.cs" />
+    <Compile Include="Views\Auth\Register\register_form.xaml.cs">
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Auth\Register\Register_process.cs" />
+    <Compile Include="Views\Auth\Register\Register_process.cs" />
     <Compile Include="Models\Auth\Login\Login_Obj.cs" />
     <Compile Include="Models\Auth\Register\Register_Obj.cs" />
     <Compile Include="Models\Auth\User.cs" />
-    <Compile Include="UI\Admin\IOT\LED\LED.cs" />
-    <Compile Include="UI\Admin\Mainpage_admin.xaml.cs">
+    <Compile Include="Controls\IOT\LED\LED.cs" />
+    <Compile Include="Views\UI\Users\Admin\Mainpage_admin.xaml.cs">
       <DependentUpon>Mainpage_admin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Admin\server_setup.xaml.cs">
+    <Compile Include="Views\Dialogs\server_setup.xaml.cs">
       <DependentUpon>server_setup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\Users\Mainpage.xaml.cs">
+    <Compile Include="Views\UI\Users\NormalUsers\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Auth\Login\login_form.xaml">
+    <Page Include="Views\Auth\Login\login_form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,21 +90,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Auth\Register\register_form.xaml">
+    <Page Include="Views\Auth\Register\register_form.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\Admin\Mainpage_admin.xaml">
+    <Page Include="Views\UI\Users\Admin\Mainpage_admin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UI\Admin\server_setup.xaml">
+    <Page Include="Views\Dialogs\server_setup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\Users\Mainpage.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\UI\Users\NormalUsers\Mainpage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

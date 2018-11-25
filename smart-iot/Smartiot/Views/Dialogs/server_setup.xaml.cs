@@ -11,8 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Smartiot.Login;
-namespace Smartiot.UI.Admin
+using Smartiot.Views.Auth.Login;
+
+namespace Smartiot.Views.Dialog
 {
     /// <summary>
     /// Interaction logic for server_setup.xaml
@@ -23,7 +24,7 @@ namespace Smartiot.UI.Admin
         {
             InitializeComponent();
         }
-        public static string serverurl = "http://192.168.0.198/";
+        public static string serverurl = Server.Rest_API.serverurl;
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
             serverurl = "http://" + txt_url.Text+"/";

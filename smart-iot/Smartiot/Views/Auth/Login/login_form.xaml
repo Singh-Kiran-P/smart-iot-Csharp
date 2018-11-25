@@ -1,9 +1,9 @@
-﻿<Window x:Class="Smartiot.Login.login_form"
+﻿<Window x:Class="Smartiot.Views.Auth.Login.login_form"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Smartiot.Login"
+        xmlns:local="clr-namespace:Smartiot.Views.Auth.Login"
         mc:Ignorable="d"
         Title="login_form" Height="488" Width="652" Visibility="Visible" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}">
     <Grid Margin="0,0,-44,-29">

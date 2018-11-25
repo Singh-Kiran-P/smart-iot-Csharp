@@ -11,9 +11,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Smartiot.Login;
 
-namespace Smartiot.UI.Users
+using Smartiot.Controls.IOT.LED;
+using Smartiot.Views.Auth.Login;
+
+namespace Smartiot.Views.UI.Users.NormalUsers
 {
     /// <summary>
     /// Interaction logic for Mainpage.xaml
@@ -28,10 +30,12 @@ namespace Smartiot.UI.Users
              *user_info[1] -->name
              *user_info[2] -->username
              *user_info[3] -->email
+             *user_info[4] -->role
              */
             txt_name.Text = Login_process.user_info[1];
             txt_id.Text = Login_process.user_info[0];
             txt_email.Text = Login_process.user_info[3];
+            txt_role.Text = Login_process.user_info[4];
 
         }
 
@@ -60,5 +64,16 @@ namespace Smartiot.UI.Users
             */
         }
 
+        private void btn_Led_on_Click(object sender, RoutedEventArgs e)
+        {
+            LED.led_on();
+
+        }
+
+        private void btn_Led_off_Click(object sender, RoutedEventArgs e)
+        {
+            LED.led_off();
+
+        }
     }
 }

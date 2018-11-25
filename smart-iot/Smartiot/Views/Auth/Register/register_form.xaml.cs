@@ -13,11 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http;
-using Smartiot.Login;
+using Smartiot.Views.Auth.Login;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 
-namespace Smartiot.Register
+namespace Smartiot.Views.Auth.Register
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
