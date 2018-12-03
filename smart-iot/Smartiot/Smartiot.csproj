@@ -39,6 +39,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\JsonRequest.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web.Extensions" />
@@ -73,6 +79,9 @@
     <Compile Include="Models\Auth\Register\Register_Obj.cs" />
     <Compile Include="Models\Auth\User.cs" />
     <Compile Include="Controls\IOT\LED\LED.cs" />
+    <Compile Include="Views\UI\Users\Admin\Mainpageadmin.xaml.cs">
+      <DependentUpon>Mainpageadmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UI\Users\Admin\Mainpage_admin.xaml.cs">
       <DependentUpon>Mainpage_admin.xaml</DependentUpon>
     </Compile>
@@ -93,6 +102,10 @@
     <Page Include="Views\Auth\Register\register_form.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UI\Users\Admin\Mainpageadmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\Admin\Mainpage_admin.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +138,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

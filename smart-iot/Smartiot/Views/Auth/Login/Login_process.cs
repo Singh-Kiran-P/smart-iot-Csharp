@@ -77,7 +77,7 @@ namespace Smartiot.Views.Auth.Login
 
                         if (role == "admin")
                         {
-                            Mainpage_admin UI_Mainpage_admin = new Mainpage_admin();
+                            Mainpageadmin UI_Mainpage_admin = new Mainpageadmin();
                             UI_Mainpage_admin.Show();
 
                         }
