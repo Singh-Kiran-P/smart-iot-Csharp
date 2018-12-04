@@ -36,7 +36,7 @@ namespace Smartiot.Views.UI.Users.Admin
             txt_id.Text = Login_process.user_info[0];
             txt_email.Text = Login_process.user_info[3];
             txt_role.Text = Login_process.user_info[4];
-
+            
         }
 
         private void btn_logout_Click(object sender, RoutedEventArgs e)

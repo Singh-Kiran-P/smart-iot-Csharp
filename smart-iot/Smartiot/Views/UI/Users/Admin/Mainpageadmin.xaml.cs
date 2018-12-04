@@ -23,5 +23,23 @@ namespace Smartiot.Views.UI.Users.Admin
         {
             InitializeComponent();
         }
+
+        private void re(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("hello");
+        }
+
+        private void ButtonCloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+            var profile = new Profile();
+            Frame_profile.Navigate(profile);
+
+        }
     }
 }

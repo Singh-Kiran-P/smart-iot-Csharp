@@ -88,6 +88,9 @@
     <Compile Include="Views\Dialogs\server_setup.xaml.cs">
       <DependentUpon>server_setup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UI\Users\Admin\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UI\Users\NormalUsers\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Dialogs\server_setup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UI\Users\Admin\Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

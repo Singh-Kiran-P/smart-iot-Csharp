@@ -31,7 +31,6 @@ namespace Smartiot.Views.Auth.Login
         private void btn_min_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
-
         }
 
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
@@ -74,6 +73,12 @@ namespace Smartiot.Views.Auth.Login
             var registerpage = new Register.register_form();
             this.Close();
             registerpage.Show();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Mainpageadmin mainpageadmin = new Mainpageadmin();
+            mainpageadmin.Show();
         }
     }
 }
