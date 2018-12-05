@@ -23,6 +23,7 @@ namespace Smartiot.Views.Dialog
         public server_setup()
         {
             InitializeComponent();
+            txt_url.Text = Server.Rest_API.serverurl;
         }
         public static string serverurl = Server.Rest_API.serverurl;
         private void btn_change_Click(object sender, RoutedEventArgs e)
@@ -40,6 +41,11 @@ namespace Smartiot.Views.Dialog
             login_form login_Form = new login_form();
             this.Close();
             login_Form.Show();
+
+        }
+
+        private void txt_url_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
