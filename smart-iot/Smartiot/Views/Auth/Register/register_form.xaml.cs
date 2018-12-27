@@ -43,8 +43,9 @@ namespace Smartiot.Views.Auth.Register
 
         private void btn_register_Click(object sender, RoutedEventArgs e)
         {
-            string name, username, email, password, password2;
+            string name,firstname, username, email, password, password2;
             name = txt_name.Text;
+            firstname = txt_Firstname.Text;
             username = txt_username.Text;
             email = txt_email.Text;
             password = pwd1.Password;
