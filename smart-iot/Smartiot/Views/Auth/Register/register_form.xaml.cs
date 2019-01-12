@@ -26,7 +26,7 @@ namespace Smartiot.Views.Auth.Register
     {
         public register_form()
         {
-            InitializeComponent();       
+            InitializeComponent();
         }
 
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,7 @@ namespace Smartiot.Views.Auth.Register
 
         private void btn_register_Click(object sender, RoutedEventArgs e)
         {
-            string name,firstname, username, email, password, password2;
+            string name, firstname, username, email, password, password2;
             name = txt_name.Text;
             firstname = txt_Firstname.Text;
             username = txt_username.Text;
@@ -52,15 +52,14 @@ namespace Smartiot.Views.Auth.Register
             password2 = pwd2.Password;
             bool check_email = !Regex.IsMatch(email, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
 
-            if (password == password2 &&check_email != true )
-            {                
-               MessageBoxResult boxResult= MessageBox.Show("Successfully Registered");
-                if (boxResult == MessageBoxResult.OK)
-                {
-                    Register_process register_Process = new Register_process(name, email, username, password, password2);
-                    this.Close();
+            if (password == password2 && check_email != true)
+            {
 
-                }
+                Register_process register_Process = new Register_process(name, firstname, email, username, password);
+                this.Close();
+                
+
+
 
             }
             else
@@ -90,10 +89,10 @@ namespace Smartiot.Views.Auth.Register
             var loginpage = new login_form();
             this.Close();
             loginpage.Show();
-            
+
         }
 
 
     }
-    }
+}
 

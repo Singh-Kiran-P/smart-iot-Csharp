@@ -8,7 +8,7 @@ namespace Smartiot.Server
 {
     class Rest_API
     {
-        public static string serverurl = "http://192.168.0.198/";
+        public static string serverurl = "http://192.168.0.198:8080";
         public string getUrl { get; set; }
         
     }

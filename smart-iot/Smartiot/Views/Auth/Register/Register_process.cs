@@ -23,22 +23,34 @@ namespace Smartiot.Views.Auth.Register
         public string username = "";
         public string succes = "";
 
-        public Register_process(string name, string email, string username, string password, string password2)
+        public Register_process(string name, string firstname, string email, string username, string password)
         {
             try
             {
                 var request = new Request();
-                var register_Model = new Register_Obj
+                var register_Model = new register_request
                 {
-                    
-                };
-                var response = (Register_Obj)request.Execute<Register_Obj>(Rest_API.serverurl +"/register", register_Model, "POST");
+                    name = name + " " + firstname,
+                    email = email,
+                    username = username,
+                    password = password
 
-                if (succes == "true")
+                };
+
+                //var response = request.Execute("http://192.168.0.198:8080/register", register_Model, "POST");
+
+                register_response response = (register_response)request.Execute<register_response>(Rest_API.serverurl + "/api/users/register", register_Model, "POST");
+
+                if (response.status == "200")
                 {
+                    MessageBox.Show("Successfully Registered");
                     login_form login_Form = new login_form();
 
                     login_Form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Register failed. Contact the adminstrator");
                 }
                 return;
 
