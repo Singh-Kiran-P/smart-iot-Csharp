@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Smartiot.Views.UI.Users.Admin;
 using Smartiot.Views.UI.Users.NormalUsers;
+using JsonRequest;
+using Smartiot.Models.Auth.Login;
+using Smartiot.Server;
 
 
 namespace Smartiot.Views.Auth.Login
@@ -37,37 +40,13 @@ namespace Smartiot.Views.Auth.Login
         {
             try
             {
+                var request = new Request();
+                var loginModel = new login_request { username = usernaam, password = password };
 
-                string server_url = Server.Rest_API.serverurl;
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/login");
-                httpWebRequest.ContentType = "application/json";
-                httpWebRequest.Method = "POST";
+                var response = (login_response)request.Execute<login_response>(Rest_API.serverurl+"/api/users/login", loginModel, "POST");
 
-                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-                {
-                    string json = "{\"username\":\"" + usernaam + "\"," +
-                                  "\"password\":\"" + password + "\"}";
 
-                    streamWriter.Write(json);
-                    streamWriter.Flush();
-                    streamWriter.Close();
-                }
-
-                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    var jss = new JavaScriptSerializer();
-
-                    Dictionary<string, string> sData = jss.Deserialize<Dictionary<string, string>>(result);
-                    id = sData["id"].ToString();
-                    name = sData["name"].ToString();
-                    username = sData["username"].ToString();
-                    email = sData["email"].ToString();
-                    role = sData["role"].ToString().ToLower(); 
-                    succes = sData["succes"].ToString();
-
-                    if (succes == "true")
+                if (succes == "true")
                     {
                         user_info.Add(id);
                         user_info.Add(name);
@@ -93,7 +72,7 @@ namespace Smartiot.Views.Auth.Login
 
 
                 }
-            }
+            
             catch (Exception ex)
             {
                 error = ex.ToString();

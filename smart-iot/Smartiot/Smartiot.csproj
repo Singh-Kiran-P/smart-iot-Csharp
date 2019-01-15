@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Auth\Login\login_response.cs" />
     <Compile Include="Models\Auth\Register\register_response.cs" />
     <Compile Include="Server\Rest_API.cs" />
     <Compile Include="Views\Auth\Login\login_form.xaml.cs">
@@ -80,7 +81,7 @@
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Auth\Register\Register_process.cs" />
-    <Compile Include="Models\Auth\Login\Login_Obj.cs" />
+    <Compile Include="Models\Auth\Login\login_request.cs" />
     <Compile Include="Models\Auth\Register\register_request.cs" />
     <Compile Include="Models\Auth\User.cs" />
     <Compile Include="Controls\IOT\LED\LED.cs" />

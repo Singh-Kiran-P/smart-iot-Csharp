@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Smartiot.Models.Auth.Login
 {
-    class Login_Obj
+    class login_request
     {
         public string username { get; set; }
         public string  password { get; set; }
