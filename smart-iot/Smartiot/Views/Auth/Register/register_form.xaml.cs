@@ -16,6 +16,7 @@ using System.Net.Http;
 using Smartiot.Views.Auth.Login;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
+using Smartiot.Process.Auth;
 
 namespace Smartiot.Views.Auth.Register
 {
@@ -56,7 +57,11 @@ namespace Smartiot.Views.Auth.Register
             {
 
                 Register_process register_Process = new Register_process(name, firstname, email, username, password);
-                this.Close();
+                
+                if(Register_process.succes == "true")
+                {
+                    this.Close();
+                }
                 
 
 

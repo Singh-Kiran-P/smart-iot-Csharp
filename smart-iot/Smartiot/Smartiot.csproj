@@ -72,19 +72,21 @@
     </ApplicationDefinition>
     <Compile Include="Models\Auth\Login\login_response.cs" />
     <Compile Include="Models\Auth\Register\register_response.cs" />
+    <Compile Include="Models\Iot\Led\led_request.cs" />
+    <Compile Include="Models\Iot\Led\led_response.cs" />
     <Compile Include="Server\Rest_API.cs" />
     <Compile Include="Views\Auth\Login\login_form.xaml.cs">
       <DependentUpon>login_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Auth\Login\Login_process.cs" />
+    <Compile Include="Process\Auth\Login_process.cs" />
     <Compile Include="Views\Auth\Register\register_form.xaml.cs">
       <DependentUpon>register_form.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Auth\Register\Register_process.cs" />
+    <Compile Include="Process\Auth\Register_process.cs" />
     <Compile Include="Models\Auth\Login\login_request.cs" />
     <Compile Include="Models\Auth\Register\register_request.cs" />
     <Compile Include="Models\Auth\User.cs" />
-    <Compile Include="Controls\IOT\LED\LED.cs" />
+    <Compile Include="Process\Iot\Led_process.cs" />
     <Compile Include="Views\UI\Users\Admin\Mainpageadmin.xaml.cs">
       <DependentUpon>Mainpageadmin.xaml</DependentUpon>
     </Compile>

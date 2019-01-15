@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Smartiot.Models.Auth.Register
+namespace Smartiot.Models.Iot.Led
 {
-    class register_response
+    class led_response
     {
-        public int status { get; set; }
         public string message { get; set; }
-
-  
+        public int status { get; set;}
+        public string permission { get; set; }
     }
 }

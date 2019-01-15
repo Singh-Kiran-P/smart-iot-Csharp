@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Smartiot.Process.Auth;
 using Smartiot.Views.UI.Users.Admin;
 
 
@@ -50,20 +51,17 @@ namespace Smartiot.Views.Auth.Login
                 server_Setup.Show();
                 return;
             }
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Missing content");
+                return;
+            }
             Login_process login_Process= new Login_process(username, password);
-            if (login_Process.succes =="true")
+            if ( Login_process.user_info !=null)
             {
                 this.Close();
             }
-            //if (Login_process.error != null)
-            //{
-            //    MessageBox.Show(Login_process.error);
-            //    return;
-            //}
-            if (login_Process.succes == "false")
-            {
-                MessageBox.Show("username or password invaild");
-            }
+
 
 
         }

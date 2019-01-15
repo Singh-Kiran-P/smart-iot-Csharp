@@ -15,13 +15,13 @@ using Smartiot.Views.Auth.Login;
 
 
 
-namespace Smartiot.Views.Auth.Register
+namespace Smartiot.Process.Auth
 {
     class Register_process
     {
 
         public string username = "";
-        public string succes = "";
+        public static string succes = "";
 
         public Register_process(string name, string firstname, string email, string username, string password)
         {
@@ -41,16 +41,25 @@ namespace Smartiot.Views.Auth.Register
 
                 register_response response = (register_response)request.Execute<register_response>(Rest_API.serverurl + "/api/users/register", register_Model, "POST");
 
-                if (response.status == "200")
+                if (response.status == 200)
                 {
-                    MessageBox.Show("Successfully Registered");
+                    MessageBox.Show(response.message);
                     login_form login_Form = new login_form();
-
+                    succes = "true";
                     login_Form.Show();
                 }
-                else
+                if (response.status == 901)
                 {
-                    MessageBox.Show("Register failed. Contact the adminstrator");
+                    MessageBox.Show(response.message);
+
+
+                }
+                if (response.status == 902)
+                {
+                    MessageBox.Show(response.message);
+                    //register_form register_Form = new register_form();
+
+                    //register_Form.Show();
                 }
                 return;
 

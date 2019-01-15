@@ -11,8 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
-using Smartiot.Controls.IOT.LED;
+using Smartiot.Models.Auth.Login;
+using Smartiot.Process.Auth;
+using Smartiot.Process.Iot;
 using Smartiot.Views.Auth.Login;
 
 namespace Smartiot.Views.UI.Users.NormalUsers
@@ -32,10 +33,13 @@ namespace Smartiot.Views.UI.Users.NormalUsers
              *user_info[3] -->email
              *user_info[4] -->role
              */
-            txt_name.Text = Login_process.user_info[1];
-            txt_id.Text = Login_process.user_info[0];
-            txt_email.Text = Login_process.user_info[3];
-            txt_role.Text = Login_process.user_info[4];
+            login_response oLogin;
+            oLogin = (login_response)Login_process.user_info[0];
+
+            txt_name.Text = oLogin.naam;
+            txt_id.Text = oLogin.id.ToString();
+            txt_email.Text = oLogin.email;
+            txt_role.Text = oLogin.role;
 
         }
 
@@ -66,13 +70,13 @@ namespace Smartiot.Views.UI.Users.NormalUsers
 
         private void btn_Led_on_Click(object sender, RoutedEventArgs e)
         {
-            LED.led_on();
+            Led_process.led_on();
 
         }
 
         private void btn_Led_off_Click(object sender, RoutedEventArgs e)
         {
-            LED.led_off();
+            Led_process.led_off();
 
         }
     }

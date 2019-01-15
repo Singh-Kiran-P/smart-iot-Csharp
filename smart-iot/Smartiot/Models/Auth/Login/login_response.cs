@@ -14,7 +14,7 @@ namespace Smartiot.Models.Auth.Login
         public string username { get; set; }
         public string role { get; set; }
         public string message { get; set; }
-        public string status { get; set; }
+        public int status { get; set; }
 
     }
 }
