@@ -10,6 +10,16 @@ using Smartiot.Server;
 using Smartiot.Models.Iot.Led;
 using Smartiot.Process.Auth;
 using Smartiot.Models.Auth.Login;
+using System.Windows;
+using Newtonsoft;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+using System.Net.Http;
+using System.Web.Script.Serialization;
+using System.Windows.Controls;
+using Newtonsoft.Json;
 
 namespace Smartiot.Process.Iot
 {
@@ -18,25 +28,52 @@ namespace Smartiot.Process.Iot
 
         public static void led_on()
         {
+            string result;
             try
             {
-                var request = new Request();
+                
 
                 login_response oLogin;
-                oLogin = (login_response)Login_process.user_info[0];  
-                var led_model = new led_request
+                oLogin = (login_response)Login_process.user_info[0];
+
+                //config request
+                string serverUrl = Rest_API.serverurl + "/api/iot/led";
+
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(serverUrl);
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+                led_request request_model = new led_request
                 {
                     userId = oLogin.id,
-                    led = 1
+                    led = "1"
+
                 };
 
-                var response = (led_response)request.Execute(Rest_API.serverurl + "/api/iot/led",led_model,"POST");
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    var json = new JavaScriptSerializer().Serialize(request_model);
+
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
+                    streamWriter.Close();
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    result = streamReader.ReadToEnd();
+                    
+                }
+                led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
+                MessageBox.Show(led_Response.message);
 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                MessageBox.Show(e.ToString());
                 throw;
             }
 
@@ -44,31 +81,48 @@ namespace Smartiot.Process.Iot
 
         public static void led_off()
         {
+            string result;
             try
             {
-                string server_url = Server.Rest_API.serverurl;
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(server_url + "api/users/iot/led");
+
+
+                login_response oLogin;
+                oLogin = (login_response)Login_process.user_info[0];
+
+                //config request
+                string serverUrl = Rest_API.serverurl + "/api/iot/led";
+
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(serverUrl);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
+                led_request request_model = new led_request
+                {
+                    userId = oLogin.id,
+                    led = "0"
+
+                };
 
                 using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                    string json = "{\"led\":\"0\"}";
-
+                    var json = new JavaScriptSerializer().Serialize(request_model);
 
                     streamWriter.Write(json);
                     streamWriter.Flush();
-
+                    streamWriter.Close();
                 }
+
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
-                    var responseText = streamReader.ReadToEnd();
-                    Console.WriteLine(responseText);
+                    result = streamReader.ReadToEnd();
 
-                    //Now you have your response.
-                    //or false depending on information in the response     
                 }
+                led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
+                MessageBox.Show(led_Response.message);
+
+
             }
             catch (Exception)
             {

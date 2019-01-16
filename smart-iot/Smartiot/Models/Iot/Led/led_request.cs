@@ -9,6 +9,6 @@ namespace Smartiot.Models.Iot.Led
     class led_request
     {
         public int userId { get; set; }
-        public int led { get; set; }
+        public string led { get; set; }
     }
 }

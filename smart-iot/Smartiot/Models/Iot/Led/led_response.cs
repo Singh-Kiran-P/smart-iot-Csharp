@@ -9,7 +9,9 @@ namespace Smartiot.Models.Iot.Led
     class led_response
     {
         public string message { get; set; }
-        public int status { get; set;}
+        
         public string permission { get; set; }
+
+        public int status { get; set; }
     }
 }
