@@ -28,7 +28,7 @@ namespace Smartiot.Process.Auth
         //public string succes = "";
         //public static string error = "";
         public static List<login_response> user_info = new List<login_response>();
-
+         public static login_response response;
 
         public Login_process()
         {
@@ -44,12 +44,16 @@ namespace Smartiot.Process.Auth
             {
                 var request = new Request();
                 var loginModel = new login_request { username = usernaam, password = password };
-               
-                var response = (login_response)request.Execute<login_response>(Rest_API.serverurl+"/api/users/login", loginModel, "POST");
 
+                 response = (login_response)request.Execute<login_response>(Rest_API.serverurl + "/api/users/login", loginModel, "POST");
+
+                if (response.status != 200)
+                {
+                    MessageBox.Show(response.message);
+                }
 
                 if (response.status == 200)
-                    {
+                {
                     login_response login_ = new login_response();
                     login_.id = response.id;
                     login_.naam = response.naam;
@@ -61,26 +65,28 @@ namespace Smartiot.Process.Auth
                     user_info.Add(login_);
 
                     if (response.role == "admin")
-                        {
+                    {
                         //Mainpageadmin UI_Mainpage_admin = new Mainpageadmin();
-                        Mainpage_admin UI_Mainpage_admin = new Mainpage_admin();
+                        Mainpageadmin UI_Mainpage_admin = new Mainpageadmin();
                         UI_Mainpage_admin.Show();
 
-                        }
-                        if (response.role == "normal_user")
-                        {
-                            //Mainpage UI_mainpage = new Mainpage();
-                            Mainpage UI_mainpage = new Mainpage();
-                        UI_mainpage.Show();
-                        }
-
                     }
-                    return;
-
-
-
+                    if (response.role == "normal_user")
+                    {
+                        //Mainpage UI_mainpage = new Mainpage();
+                        Mainpage UI_mainpage = new Mainpage();
+                        UI_mainpage.Show();
+                    }
+                   
                 }
-            
+                return;
+
+
+
+
+
+            }
+
             catch (Exception ex)
             {
                 string error = ex.ToString();

@@ -8,7 +8,17 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Profile" Background="White">
 
+
     <Grid>
-        <TextBlock Text="hello"></TextBlock> 
+
+        <TextBox x:Name="textBox" TextWrapping="Wrap" Text="TextBox" Margin="228,166,269,260"/>
+        <TextBox x:Name="textBox_Copy" TextWrapping="Wrap" Text="TextBox" Margin="228,195,269,231"/>
+        <TextBox x:Name="textBox_Copy1" TextWrapping="Wrap" Text="TextBox" Margin="228,224,269,202"/>
+        <TextBox x:Name="textBox_Copy2" TextWrapping="Wrap" Text="TextBox" Margin="228,253,269,173"/>
+        <TextBox x:Name="textBox_Copy3" TextWrapping="Wrap" Text="TextBox" Margin="228,282,269,144"/>
+        <TextBox x:Name="textBox_Copy4" TextWrapping="Wrap" Text="TextBox" Margin="228,311,269,115"/>
+        <TextBox x:Name="textBox_Copy5" TextWrapping="Wrap" Text="TextBox" Margin="228,340,269,86"/>
+
     </Grid>
+
 </Page>

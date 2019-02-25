@@ -57,7 +57,7 @@ namespace Smartiot.Views.Auth.Login
                 return;
             }
             Login_process login_Process= new Login_process(username, password);
-            if ( Login_process.user_info !=null)
+            if ( Login_process.response.id != null)
             {
                 this.Close();
             }

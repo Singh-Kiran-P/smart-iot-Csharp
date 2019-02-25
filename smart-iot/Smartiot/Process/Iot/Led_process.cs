@@ -46,7 +46,7 @@ namespace Smartiot.Process.Iot
 
                 led_request request_model = new led_request
                 {
-                    userId = oLogin.id,
+                    userId = Convert.ToInt16( oLogin.id),
                     led = "1"
 
                 };
@@ -99,7 +99,7 @@ namespace Smartiot.Process.Iot
 
                 led_request request_model = new led_request
                 {
-                    userId = oLogin.id,
+                    userId = Convert.ToInt16(oLogin.id),
                     led = "0"
 
                 };

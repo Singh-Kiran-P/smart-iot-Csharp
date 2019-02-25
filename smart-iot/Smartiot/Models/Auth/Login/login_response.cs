@@ -8,7 +8,7 @@ namespace Smartiot.Models.Auth.Login
 {
     class login_response
     {
-        public int id { get; set; }
+        public string id { get; set; }
         public string naam { get; set; }
         public string email { get; set; }
         public string username { get; set; }
