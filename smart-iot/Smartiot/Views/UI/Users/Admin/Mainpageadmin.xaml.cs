@@ -36,9 +36,19 @@ namespace Smartiot.Views.UI.Users.Admin
 
         private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
-            var profile = new Profile();
-            Frame_profile.Navigate(profile);
+
+            Main.Content = new Profile();
+
+
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
