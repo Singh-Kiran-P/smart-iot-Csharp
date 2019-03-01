@@ -37,7 +37,6 @@ namespace Smartiot.Views.UI.Users.Admin
         private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
 
-            Main.Content = new Profile();
 
 
         }
@@ -50,6 +49,27 @@ namespace Smartiot.Views.UI.Users.Admin
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ListViewItem_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("gedsg");
+        }
+
+        private void Profile_Selected(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Profile();
+
+        }
+
+        private void Lv_iot_Selected(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Iot();
         }
     }
 }

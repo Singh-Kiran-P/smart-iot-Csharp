@@ -87,6 +87,9 @@
     <Compile Include="Models\Auth\Register\register_request.cs" />
     <Compile Include="Models\Auth\User.cs" />
     <Compile Include="Process\Iot\Led_process.cs" />
+    <Compile Include="Views\UI\Users\Admin\Iot.xaml.cs">
+      <DependentUpon>Iot.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UI\Users\Admin\Mainpageadmin.xaml.cs">
       <DependentUpon>Mainpageadmin.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
     <Page Include="Views\Auth\Register\register_form.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UI\Users\Admin\Iot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\Admin\Mainpageadmin.xaml">
       <SubType>Designer</SubType>
@@ -155,6 +162,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\UI\Users\Iot\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
