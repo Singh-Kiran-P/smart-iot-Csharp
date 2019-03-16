@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BespokeFusion;
 using Smartiot.Process.Auth;
 using Smartiot.Views.UI.Users.Admin;
 
@@ -36,7 +37,7 @@ namespace Smartiot.Views.Auth.Login
 
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("bye bye");
+            //MaterialMessageBox.Show("bye bye");
             System.Environment.Exit(1); 
         }
 
@@ -53,7 +54,7 @@ namespace Smartiot.Views.Auth.Login
             }
             if (username == "" || password == "")
             {
-                MessageBox.Show("Missing content");
+                MaterialMessageBox.Show("Missing content");
                 return;
             }
             Login_process login_Process= new Login_process(username, password);

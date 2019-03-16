@@ -14,6 +14,7 @@ using Smartiot.Server;
 using Smartiot.Views.UI.Users.Admin;
 using Smartiot.Views.UI.Users.NormalUsers;
 using System.Windows;
+using BespokeFusion;
 
 namespace Smartiot.Process.Auth
 {
@@ -49,7 +50,7 @@ namespace Smartiot.Process.Auth
 
                 if (response.status != 200)
                 {
-                    MessageBox.Show(response.message);
+                    MaterialMessageBox.Show(response.message);
                 }
 
                 if (response.status == 200)
@@ -74,7 +75,7 @@ namespace Smartiot.Process.Auth
                     if (response.role == "normal_user")
                     {
                         //Mainpage UI_mainpage = new Mainpage();
-                        Mainpage UI_mainpage = new Mainpage();
+                        Mainpage_normaal UI_mainpage = new Mainpage_normaal();
                         UI_mainpage.Show();
                     }
                    
@@ -91,7 +92,7 @@ namespace Smartiot.Process.Auth
             {
                 string error = ex.ToString();
 
-                MessageBox.Show(error);
+                MaterialMessageBox.Show(error);
 
             }
         }

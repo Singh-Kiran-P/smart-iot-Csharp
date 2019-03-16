@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows;
+using BespokeFusion;
 using JsonRequest;
 using Newtonsoft;
 using Smartiot.Models.Auth.Register;
@@ -43,20 +44,20 @@ namespace Smartiot.Process.Auth
 
                 if (response.status == 200)
                 {
-                    MessageBox.Show(response.message);
+                    MaterialMessageBox.Show(response.message);
                     login_form login_Form = new login_form();
                     succes = "true";
                     login_Form.Show();
                 }
                 if (response.status == 901)
                 {
-                    MessageBox.Show(response.message);
+                    MaterialMessageBox.Show(response.message);
 
 
                 }
                 if (response.status == 902)
                 {
-                    MessageBox.Show(response.message);
+                    MaterialMessageBox.Show(response.message);
                     //register_form register_Form = new register_form();
 
                     //register_Form.Show();

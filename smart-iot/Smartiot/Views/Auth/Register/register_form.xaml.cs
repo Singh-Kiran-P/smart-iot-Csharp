@@ -17,6 +17,7 @@ using Smartiot.Views.Auth.Login;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 using Smartiot.Process.Auth;
+using BespokeFusion;
 
 namespace Smartiot.Views.Auth.Register
 {
@@ -32,7 +33,7 @@ namespace Smartiot.Views.Auth.Register
 
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("bye bye");           
+            //MaterialMessageBox.Show("bye bye");           
             System.Environment.Exit(1);
         }
 
@@ -71,13 +72,13 @@ namespace Smartiot.Views.Auth.Register
             {
                 if (check_email)
                 {
-                    MessageBox.Show("Invaild Email");
+                    MaterialMessageBox.Show("Invaild Email");
                     return;
 
                 }
                 if (password != password2)
                 {
-                    MessageBox.Show("Password does not match the confirm password.");
+                    MaterialMessageBox.Show("Password does not match the confirm password.");
                     return;
 
                 }

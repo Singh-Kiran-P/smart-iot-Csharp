@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BespokeFusion;
 using Smartiot.Views.Auth.Login;
 
 namespace Smartiot.Views.Dialog
@@ -29,7 +30,7 @@ namespace Smartiot.Views.Dialog
         private void btn_change_Click(object sender, RoutedEventArgs e)
         {
             serverurl = "http://" + txt_url.Text+"/";
-            MessageBox.Show(serverurl);
+            MaterialMessageBox.Show(serverurl);
             login_form login_Form = new login_form();
             this.Close();
             login_Form.Show();

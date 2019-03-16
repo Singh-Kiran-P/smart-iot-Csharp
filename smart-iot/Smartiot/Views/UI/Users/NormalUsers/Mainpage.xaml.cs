@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BespokeFusion;
 using Smartiot.Models.Auth.Login;
 using Smartiot.Process.Auth;
 using Smartiot.Process.Iot;
@@ -48,7 +49,7 @@ namespace Smartiot.Views.UI.Users.NormalUsers
             Login_process.user_info.Clear();
             var loginpage = new login_form();
             this.Close();
-            MessageBox.Show("Logout successfully ");
+            MaterialMessageBox.Show("Logout successfully ");
             loginpage.Show();
 
         }

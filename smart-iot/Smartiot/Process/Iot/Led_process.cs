@@ -20,6 +20,7 @@ using System.Net.Http;
 using System.Web.Script.Serialization;
 using System.Windows.Controls;
 using Newtonsoft.Json;
+using BespokeFusion;
 
 namespace Smartiot.Process.Iot
 {
@@ -67,13 +68,13 @@ namespace Smartiot.Process.Iot
                     
                 }
                 led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
-                MessageBox.Show(led_Response.message);
+                MaterialMessageBox.Show(led_Response.message);
 
 
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString());
+                MaterialMessageBox.Show(e.ToString());
                 throw;
             }
 
@@ -120,7 +121,7 @@ namespace Smartiot.Process.Iot
 
                 }
                 led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
-                MessageBox.Show(led_Response.message);
+                MaterialMessageBox.Show(led_Response.message);
 
 
             }

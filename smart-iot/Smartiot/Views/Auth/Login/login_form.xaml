@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Smartiot.Views.Auth.Login"
         mc:Ignorable="d"
-        Title="login_form" Height="488" Width="652" Visibility="Visible" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}">
+        Title="login_form" Height="488" Width="652" Visibility="Visible" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="White">
     <Grid Margin="0,0,-44,-29">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -34,14 +34,12 @@
         <TextBlock x:Name="textBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="383,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="147" Foreground="#FFFF9700" FontSize="48" FontWeight="Bold" Text="Login"/>
         <Label x:Name="label_Copy3" Grid.ColumnSpan="2" Content="Username" HorizontalAlignment="Left" Margin="338,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.737,-1.193" Width="95" Foreground="#FF0CA6EE" FontWeight="Bold" Height="25"/>
         <Label x:Name="label_Copy4" Grid.ColumnSpan="2" Content="Password" HorizontalAlignment="Left" Margin="338,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.737,-1.193" Width="70" Foreground="#FF0CA6EE" FontWeight="Bold" Height="26"/>
-
-        <Button x:Name="btn_login" Grid.ColumnSpan="2" Content="Login" HorizontalAlignment="Left" Height="42" Margin="383,261,0,0" VerticalAlignment="Top" Width="162" Background="{x:Null}" BorderBrush="White" Foreground="#FFF0D7D7" FontSize="22" FontWeight="Bold" Click="btn_login_Click" TabIndex="2"/>
+        <Button x:Name="btn_login" Grid.ColumnSpan="2" Content="Login" HorizontalAlignment="Left" Margin="374,251,0,0" VerticalAlignment="Top" Width="153" Click="btn_login_Click" TabIndex="2" Height="36"/>
         <Button x:Name="btn_Exit" Grid.ColumnSpan="2" Content="[ x ]" HorizontalAlignment="Left" Margin="618,21,0,0" VerticalAlignment="Top" Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" Height="31" Click="btn_Exit_Click"/>
-        <PasswordBox x:Name="pwdbox_password" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="338,207,0,0" VerticalAlignment="Top" Width="259" Height="26" BorderBrush="{x:Null}" Foreground="Black" SelectionBrush="{x:Null}" TabIndex="1"/>
-        <TextBox x:Name="txt_username" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="338,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="259" TabIndex="0"/>
+        <PasswordBox x:Name="pwdbox_password" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="338,207,0,0"  VerticalAlignment="Top" Width="259" Height="26" BorderBrush="{x:Null}" Foreground="Black" SelectionBrush="{x:Null}" TabIndex="1"/>
+        <TextBox x:Name="txt_username" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="338,155,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="259" TabIndex="0"/>
         <Button x:Name="btn_min" Grid.ColumnSpan="2" Content="_" HorizontalAlignment="Left" Margin="581,21,0,0" VerticalAlignment="Top" Width="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" Height="31" Click="btn_min_Click"/>
         <Label x:Name="label_Copy1s" Grid.ColumnSpan="2" Content="SmartIOT" HorizontalAlignment="Left" Margin="55,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.737,-1.193" Width="196" Foreground="#FF1181ED" FontWeight="Bold" Height="100" Background="{x:Null}" FontSize="36"/>
-        <Button x:Name="btn_register_from" Grid.ColumnSpan="2" Content="Register" HorizontalAlignment="Left" Height="22" Margin="594,440,0,0" VerticalAlignment="Top" Width="58" Background="{x:Null}" BorderBrush="White" Foreground="#FFF0D7D7" FontSize="14" FontWeight="Bold" Click="btn_register_from_Click" TabIndex="3"/>
-        <Button x:Name="button" Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" Margin="408,374,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="btn_register_from" Grid.ColumnSpan="2" Content="Register" HorizontalAlignment="Left" Height="30" Margin="561,428,0,0" VerticalAlignment="Top" Width="89" Background="{x:Null}" BorderBrush="White" Foreground="#FFF0D7D7" FontSize="14" FontWeight="Bold" Click="btn_register_from_Click" TabIndex="3"/>
     </Grid>
 </Window>

@@ -13,14 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Smartiot.Views.UI.Users.Admin
+namespace Smartiot.Views.UI.Users.NormalUsers
 {
     /// <summary>
     /// Interaction logic for Mainpage_admin.xaml
     /// </summary>
-    public partial class Mainpageadmin : Window
+    public partial class Mainpage_normaal : Window
     {
-        public Mainpageadmin()
+        public Mainpage_normaal()
         {
             InitializeComponent();
         }
