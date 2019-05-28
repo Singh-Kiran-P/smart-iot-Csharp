@@ -117,6 +117,9 @@
     <Compile Include="Views\UI\Users\NormalUsers\Mainpagea_normaal.xaml.cs">
       <DependentUpon>Mainpagea_normaal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UI\Users\NormalUsers\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UI\Users\NormalUsers\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -133,8 +136,8 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UI\Users\Admin\Iot.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UI\Users\Admin\Mainpageadmin.xaml">
       <SubType>Designer</SubType>
@@ -145,8 +148,8 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\Admin\Profile.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UI\Users\NormalUsers\Iot.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +162,10 @@
     <Page Include="Views\UI\Users\NormalUsers\Mainpagea_normaal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UI\Users\NormalUsers\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\NormalUsers\Profile.xaml">
       <Generator>MSBuild:Compile</Generator>

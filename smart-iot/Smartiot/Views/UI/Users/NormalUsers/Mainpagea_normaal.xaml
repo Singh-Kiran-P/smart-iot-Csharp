@@ -47,11 +47,11 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="257*"/>
-            <ColumnDefinition Width="283*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid x:Name="GridBackground" Background="#55313131" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="0,0,24,0"/>
-        <Frame Margin="0,0,24,0"  x:Name="Main" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+        <Frame Margin="0,0,7,0"  x:Name="Main" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Grid.Row="1"/>
         <Button x:Name="ButtonOpen" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <materialDesign:PackIcon Kind="Menu" Foreground="#FF313131"/>
         </Button>
@@ -68,7 +68,7 @@
                 </TransformGroup>
             </Grid.RenderTransform>
             <StackPanel>
-                <Image Height="140" Source="" Stretch="Fill"/>
+                <Image Height="140" Source="#" Stretch="Fill"/>
                 <ListView Foreground="#FF313131" FontFamily="Champagne &amp; Limousines" FontSize="18" Height="300">
                     <ListViewItem x:Name="lv_Profile" Height="45" Padding="0" Selected="Profile_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">

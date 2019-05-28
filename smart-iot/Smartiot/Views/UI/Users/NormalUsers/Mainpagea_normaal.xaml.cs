@@ -54,7 +54,7 @@ namespace Smartiot.Views.UI.Users.NormalUsers
 
         private void ListViewItem_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+
         }
 
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)

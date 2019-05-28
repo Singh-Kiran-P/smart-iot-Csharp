@@ -64,13 +64,13 @@ namespace Smartiot.Views.UI.Users.Admin
 
         private void Profile_Selected(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Profile();
+            Main1.Content = new Profile();
 
         }
 
         private void Lv_iot_Selected(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Iot();
+            Main1.Content = new Iot();
         }
     }
 }

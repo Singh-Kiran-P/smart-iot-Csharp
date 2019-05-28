@@ -24,5 +24,22 @@ namespace Smartiot.Views.UI.Users.Admin
         {
             InitializeComponent();
         }
+
+        private void led01(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            MessageBox.Show("hello");
+        }
+
+        private void HandleChecked(object sender, RoutedEventArgs e)
+        {
+            Process.Iot.Led_process.led_on();
+
+        }
+        private void HandleUnChecked(object sender, RoutedEventArgs e)
+        {
+            Process.Iot.Led_process.led_off();
+
+
+        }
     }
 }

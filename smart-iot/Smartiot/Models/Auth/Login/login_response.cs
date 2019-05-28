@@ -15,6 +15,7 @@ namespace Smartiot.Models.Auth.Login
         public string role { get; set; }
         public string message { get; set; }
         public int status { get; set; }
+        public string FCM_token { get; set; }
 
     }
 }

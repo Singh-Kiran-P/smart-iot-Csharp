@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Mainpage Admin" Height="206" Width="826">
     <Grid>
-        <Button x:Name="btn_logout" Content="Logout" HorizontalAlignment="Left" Margin="698,6,0,0" VerticalAlignment="Top" Width="109" Click="btn_logout_Click" Height="21" />
+        <Button x:Name="btn_logout" Content="Logout" HorizontalAlignment="Left" Margin="698,6,0,0" VerticalAlignment="Top" Width="109" Click="btn_logout_Click" Height="26" />
         <TextBox x:Name="txt_id" HorizontalAlignment="Left" Height="20" Margin="518,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
         <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="20" Margin="518,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
         <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="20" Margin="518,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>

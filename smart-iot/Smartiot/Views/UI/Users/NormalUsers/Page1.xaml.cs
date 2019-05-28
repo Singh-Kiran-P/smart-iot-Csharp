@@ -16,30 +16,13 @@ using System.Windows.Shapes;
 namespace Smartiot.Views.UI.Users.NormalUsers
 {
     /// <summary>
-    /// Interaction logic for Iot.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Iot : Page
+    public partial class Page1 : Page
     {
-        public Iot()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void led01(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            MessageBox.Show("hello");
-        }
-
-        private void HandleChecked(object sender, RoutedEventArgs e)
-        {
-            Process.Iot.Led_process.led_on();
-
-        }
-        private void HandleUnChecked(object sender, RoutedEventArgs e)
-        {
-            Process.Iot.Led_process.led_off();
-
-
         }
     }
 }

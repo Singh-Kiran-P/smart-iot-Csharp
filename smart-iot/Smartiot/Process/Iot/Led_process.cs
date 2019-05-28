@@ -1,24 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using JsonRequest;
 using Smartiot.Server;
 using Smartiot.Models.Iot.Led;
 using Smartiot.Process.Auth;
 using Smartiot.Models.Auth.Login;
-using System.Windows;
-using Newtonsoft;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-using System.Net.Http;
 using System.Web.Script.Serialization;
-using System.Windows.Controls;
 using Newtonsoft.Json;
 using BespokeFusion;
 
@@ -48,7 +35,10 @@ namespace Smartiot.Process.Iot
                 led_request request_model = new led_request
                 {
                     userId = Convert.ToInt16( oLogin.id),
-                    led = "1"
+                    action = "1",
+                    firebase_token = oLogin.FCM_token,
+                    endPoint ="all"
+                    
 
                 };
 
@@ -101,7 +91,10 @@ namespace Smartiot.Process.Iot
                 led_request request_model = new led_request
                 {
                     userId = Convert.ToInt16(oLogin.id),
-                    led = "0"
+                    action = "0",
+                    firebase_token = oLogin.FCM_token,
+                    endPoint = "all"
+
 
                 };
 

@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Smartiot.Views.UI.Users;
-using Smartiot.Views.UI.Users;
 using JsonRequest;
 using Smartiot.Models.Auth.Login;
 using Smartiot.Server;
@@ -63,6 +62,7 @@ namespace Smartiot.Process.Auth
                     login_.role = response.role;
                     login_.status = response.status;
                     login_.message = response.message;
+                    login_.FCM_token = response.FCM_token;
                     user_info.Add(login_);
 
                     if (response.role == "admin")
