@@ -108,8 +108,14 @@
     <Compile Include="Views\UI\Users\Admin\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UI\Users\NormalUsers\Feedback.xaml.cs">
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UI\Users\NormalUsers\Iot.xaml.cs">
       <DependentUpon>Iot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UI\Users\NormalUsers\Logs.xaml.cs">
+      <DependentUpon>Logs.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UI\Users\NormalUsers\Mainpage.xaml.cs">
       <DependentUpon>Mainpage.xaml</DependentUpon>
@@ -117,11 +123,14 @@
     <Compile Include="Views\UI\Users\NormalUsers\Mainpagea_normaal.xaml.cs">
       <DependentUpon>Mainpagea_normaal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UI\Users\NormalUsers\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="Views\UI\Users\NormalUsers\Privacy_Policy.xaml.cs">
+      <DependentUpon>Privacy_Policy.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UI\Users\NormalUsers\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UI\Users\NormalUsers\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Auth\Login\login_form.xaml">
       <SubType>Designer</SubType>
@@ -151,9 +160,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\UI\Users\NormalUsers\Feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UI\Users\NormalUsers\Iot.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UI\Users\NormalUsers\Logs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\NormalUsers\Mainpage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -163,13 +180,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\UI\Users\NormalUsers\Page1.xaml">
+    <Page Include="Views\UI\Users\NormalUsers\Privacy_Policy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UI\Users\NormalUsers\Profile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UI\Users\NormalUsers\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

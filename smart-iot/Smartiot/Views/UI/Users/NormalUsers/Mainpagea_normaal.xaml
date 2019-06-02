@@ -56,8 +56,11 @@
             <materialDesign:PackIcon Kind="Menu" Foreground="#FF313131"/>
         </Button>
         <Button x:Name="ButtonCloseWindow" HorizontalAlignment="Right" Foreground="Black" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0" Click="ButtonCloseWindow_Click" Grid.Column="1" Grid.RowSpan="2">
-            <materialDesign:PackIcon Kind="Close"/>
+            <materialDesign:PackIcon Kind="Logout"/>
         </Button>
+        <Label Grid.ColumnSpan="2" Content="Logout" HorizontalAlignment="Left" Margin="1002,1,0,0" VerticalAlignment="Top"/>
+
+
         <Grid x:Name="GridMenu" Width="260" HorizontalAlignment="Left" Margin="-260,0,0,0" Background="White" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="3" Grid.ColumnSpan="1">
             <Grid.RenderTransform>
                 <TransformGroup>
@@ -76,31 +79,32 @@
                             <TextBlock Text="Profile" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
+
                     <ListViewItem x:Name="lv_iot" Height="45" Padding="0" Selected="Lv_iot_Selected" >
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="SmokeDetector" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
                             <TextBlock Text="Iot" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
+                    <ListViewItem x:Name="Logs" Height="45" Padding="0" MouseDoubleClick="re" Selected="Logs_Selected">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="Book" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
+                            <TextBlock Text="Logs" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="policy" Height="45" Padding="0" Selected="Policy_Selected">
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <materialDesign:PackIcon Kind="VirtualPrivateNetwork" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
+                            <TextBlock Text="Privacy Policy" Margin="10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="feedback" Selected="Feedback_Selected" Height="45" Padding="0">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Lightbulb" Width="20" Height="20" Foreground="Green" Margin="5" VerticalAlignment="Center"/>
                             <TextBlock Text="Send Feedback" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="Recommend" Height="45" Padding="0" MouseDoubleClick="re">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="Heart" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Recommend" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
-                        <StackPanel Orientation="Horizontal" Margin="10 0">
-                            <materialDesign:PackIcon Kind="StarCircle" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Premium Subscription" Margin="10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="45" Padding="0">
+                    <ListViewItem x:Name="settings"  Selected="Settings_Selected" Height="45" Padding="0">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" Margin="5" VerticalAlignment="Center"/>
                             <TextBlock Text="Settings" Margin="10"/>

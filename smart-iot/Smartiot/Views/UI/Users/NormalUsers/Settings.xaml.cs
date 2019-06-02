@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Smartiot.Views.UI.Users.NormalUsers
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for Settings.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Settings : Page
     {
-        public Page1()
+        public Settings()
         {
             InitializeComponent();
         }

@@ -57,8 +57,10 @@ namespace Smartiot.Process.Iot
                     result = streamReader.ReadToEnd();
                     
                 }
+                /*
                 led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
                 MaterialMessageBox.Show(led_Response.message);
+                */
 
 
             }
@@ -113,9 +115,10 @@ namespace Smartiot.Process.Iot
                     result = streamReader.ReadToEnd();
 
                 }
+                /*
                 led_response led_Response = JsonConvert.DeserializeObject<led_response>(result);
                 MaterialMessageBox.Show(led_Response.message);
-
+                */
 
             }
             catch (Exception)
