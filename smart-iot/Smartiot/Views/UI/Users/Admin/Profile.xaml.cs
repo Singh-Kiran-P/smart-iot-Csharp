@@ -32,7 +32,7 @@ namespace Smartiot.Views.UI.Users.Admin
             txt_email.Text = oLogin.email;
             txt_FCM_token.Text = oLogin.FCM_token;
             txt_message.Text = oLogin.message;
-            txt_name.Text = oLogin.naam;
+            txt_name.Text = oLogin.name;
             txt_role.Text = oLogin.role;
             txt_username.Text = oLogin.username;
         }

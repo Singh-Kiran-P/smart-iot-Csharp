@@ -37,7 +37,7 @@ namespace Smartiot.Views.UI.Users.NormalUsers
             login_response oLogin;
             oLogin = (login_response)Login_process.user_info[0];
 
-            txt_name.Text = oLogin.naam;
+            txt_name.Text = oLogin.name;
             txt_id.Text = oLogin.id.ToString();
             txt_email.Text = oLogin.email;
             txt_role.Text = oLogin.role;

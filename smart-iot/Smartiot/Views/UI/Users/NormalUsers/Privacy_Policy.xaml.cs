@@ -24,5 +24,11 @@ namespace Smartiot.Views.UI.Users.NormalUsers
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.MainBrowser.Navigate("http://en.wikipedia.org/");
+
+        }
     }
 }

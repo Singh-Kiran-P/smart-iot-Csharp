@@ -56,7 +56,7 @@ namespace Smartiot.Process.Auth
                 {
                     login_response login_ = new login_response();
                     login_.id = response.id;
-                    login_.naam = response.naam;
+                    login_.name = response.name;
                     login_.email = response.email;
                     login_.username = response.username;
                     login_.role = response.role;
@@ -68,8 +68,8 @@ namespace Smartiot.Process.Auth
                     if (response.role == "admin")
                     {
                         //Mainpageadmin UI_Mainpage_admin = new Mainpageadmin();
-                        Mainpageadmin UI_Mainpage_admin = new Mainpageadmin();
-                        UI_Mainpage_admin.Show();
+                        Mainpage_normaal UI_mainpage = new Mainpage_normaal();
+                        UI_mainpage.Show();
 
                     }
                     if (response.role == "normal_user")
