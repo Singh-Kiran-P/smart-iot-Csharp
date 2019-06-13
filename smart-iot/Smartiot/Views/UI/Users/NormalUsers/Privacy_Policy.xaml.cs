@@ -27,7 +27,7 @@ namespace Smartiot.Views.UI.Users.NormalUsers
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.MainBrowser.Navigate("http://en.wikipedia.org/");
+            this.MainBrowser.Navigate("https://sites.google.com/view/smartiot2456/nl");
 
         }
     }

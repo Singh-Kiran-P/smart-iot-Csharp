@@ -4,13 +4,17 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Smartiot.Views.UI.Users.NormalUsers"
-      Background="White"
+       Background="#232228"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Logs">
+      d:DesignHeight="450"
+      Title="Logs" Width="1044.2">
 
     <Grid Margin="299,0,0,-0.4">
-        <ListBox HorizontalAlignment="Left" Height="263" Margin="64,104,0,0" VerticalAlignment="Top" Width="351"/>
-        <Label Content="UserId" HorizontalAlignment="Left" Margin="59,47,0,0" VerticalAlignment="Top"/>
+        <ListBox Foreground="White" x:Name="list_logs" HorizontalAlignment="Left" Height="263" Margin="64,104,-54,0" VerticalAlignment="Top" Width="491"/>
+        <Label  Foreground="White"  Content="UserId:" HorizontalAlignment="Left" Margin="59,47,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" x:Name="lbl_userId" Content="" HorizontalAlignment="Left" Margin="109,47,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" x:Name="lbl_usserId" Content="" HorizontalAlignment="Left" Margin="109,47,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Content="Name:" HorizontalAlignment="Left" Margin="175,47,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" x:Name="lbl_userName" Content="" HorizontalAlignment="Left" Margin="225,47,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

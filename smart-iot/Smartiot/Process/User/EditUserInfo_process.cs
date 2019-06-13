@@ -13,14 +13,14 @@ namespace Smartiot.Process.User
 {
     class EditUserInfo_process
     {
-        public EditUserInfo_process(string userId, string name1, string email1, string password1)
+        public EditUserInfo_process(string userId1, string name1, string email1, string password1)
         {
             try
             {
                 var request = new Request();
                 var edit_Model = new editUser_request
                 {
-                    userId = userId,
+                    userId = userId1,
                     name = name1,
                     email = email1,
                     password = password1
@@ -57,7 +57,7 @@ namespace Smartiot.Process.User
                 return;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
             }

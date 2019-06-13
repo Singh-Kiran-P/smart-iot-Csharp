@@ -54,6 +54,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Smartiot.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BespokeFusion, Version=1.0.1.10, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialMessageBox.1.0.0.11\lib\BespokeFusion.dll</HintPath>
@@ -105,7 +108,10 @@
     <Compile Include="Models\Iot\Led\led_response.cs" />
     <Compile Include="Models\Users\EditUser\editUser_request.cs" />
     <Compile Include="Models\Users\EditUser\editUser_response.cs" />
+    <Compile Include="Models\Users\ShowLogs\showLogs_request.cs" />
+    <Compile Include="Models\Users\ShowLogs\showLogs_response.cs" />
     <Compile Include="Process\User\EditUserInfo_process.cs" />
+    <Compile Include="Process\User\ShowLogs_process.cs" />
     <Compile Include="Server\Rest_API.cs" />
     <Compile Include="Views\Auth\Login\login_form.xaml.cs">
       <DependentUpon>login_form.xaml</DependentUpon>
@@ -248,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="image%27s\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image%27s\96128.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

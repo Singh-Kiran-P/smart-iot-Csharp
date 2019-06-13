@@ -50,18 +50,18 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="GridBackground" Background="#55313131" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="0,0,24,0"/>
-        <Frame Margin="0,0,7,0"  x:Name="Main" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+        <Grid x:Name="GridBackground" Background="#232228" Opacity="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="0,0,24,0"/>
+        <Frame Background="#232228"  Margin="0,0.2,0,0"  x:Name="Main" Grid.ColumnSpan="2" Grid.RowSpan="2" NavigationUIVisibility="Hidden" Grid.Row="1"/>
         <Button x:Name="ButtonOpen" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <materialDesign:PackIcon Kind="Menu" Foreground="#FF313131"/>
         </Button>
-        <Button x:Name="ButtonCloseWindow" HorizontalAlignment="Right" Foreground="Black" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0" Click="ButtonCloseWindow_Click" Grid.Column="1" Grid.RowSpan="2">
-            <materialDesign:PackIcon Kind="Logout"/>
+        <Button x:Name="ButtonCloseWindow" HorizontalAlignment="Right" Foreground="Black" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="20" Height="30" Padding="0" Click="ButtonCloseWindow_Click" Grid.Column="1" Grid.RowSpan="2">
+            <materialDesign:PackIcon Kind="Logout" Height="21" Width="23"/>
         </Button>
-        <Label Grid.ColumnSpan="2" Content="Logout" HorizontalAlignment="Left" Margin="1002,1,0,0" VerticalAlignment="Top"/>
+        <Label Foreground="White" Grid.ColumnSpan="2" Content="Logout" HorizontalAlignment="Left" Margin="1002,1,0,0" VerticalAlignment="Top"/>
 
 
-        <Grid x:Name="GridMenu" Width="260" HorizontalAlignment="Left" Margin="-260,0,0,0" Background="White" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="3" Grid.ColumnSpan="1">
+        <Grid x:Name="GridMenu" Width="260" HorizontalAlignment="Left" Margin="-260,0,0,0" Background="#111013" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="3" Grid.ColumnSpan="1">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -76,44 +76,44 @@
                     <ListViewItem x:Name="lv_Profile" Height="45" Padding="0" Selected="Profile_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="FaceProfile" Width="20" Height="20" Foreground="Gray" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Profile" Margin="10"/>
+                            <TextBlock Foreground="White" Text="Profile" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
 
                     <ListViewItem x:Name="lv_iot" Height="45" Padding="0" Selected="Lv_iot_Selected" >
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="SmokeDetector" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Iot" Margin="10"/>
+                            <TextBlock Foreground="White" Text="Iot" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="Logs" Height="45" Padding="0" MouseDoubleClick="re" Selected="Logs_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Book" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Logs" Margin="10"/>
+                            <TextBlock Foreground="White" Text="Logs" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="policy" Height="45" Padding="0" Selected="Policy_Selected">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="VirtualPrivateNetwork" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Privacy Policy" Margin="10"/>
+                            <TextBlock Foreground="White" Text="Privacy Policy" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="feedback" Selected="Feedback_Selected" Height="45" Padding="0">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Lightbulb" Width="20" Height="20" Foreground="Green" Margin="5" VerticalAlignment="Center"/>
-                            <TextBlock Text="Send Feedback" Margin="10"/>
+                            <TextBlock Foreground="White" Text="Send Feedback" Margin="10"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="settings"  Selected="Settings_Selected" Height="45" Padding="0">
+                    <!--<ListViewItem x:Name="settings"  Selected="Settings_Selected" Height="45" Padding="0">
                         <StackPanel Orientation="Horizontal" Margin="10 0">
                             <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" Margin="5" VerticalAlignment="Center"/>
                             <TextBlock Text="Settings" Margin="10"/>
                         </StackPanel>
-                    </ListViewItem>
+                    </ListViewItem>-->
                 </ListView>
             </StackPanel>
             <Button x:Name="ButtonClose" HorizontalAlignment="Right" Foreground="Black" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0" Click="ButtonClose_Click">
-                <materialDesign:PackIcon Kind="Close"/>
+                <materialDesign:PackIcon Kind="Close" Foreground="White"/>
             </Button>
 
         </Grid>

@@ -5,45 +5,45 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Smartiot.Views.UI.Users.NormalUsers"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.Foreground="White"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
+     Background="#232228"
      FontFamily="{DynamicResource MaterialDesignFont}"
-      Title="Profile" >
+      Title="Profile" Width="1089.2" >
 
 
     <Grid>
-        <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="444,340,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.5,0.5" Height="41" Click="Btn_Save_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.149"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label Content="userId" HorizontalAlignment="Left" Margin="375,91,0,0" VerticalAlignment="Top"/>
-        <Label Content="userName" HorizontalAlignment="Left" Margin="375,120,0,0" VerticalAlignment="Top"/>
-        <Label Content="email" HorizontalAlignment="Left" Margin="375,205,0,0" VerticalAlignment="Top"/>
-        <Label Content="role" HorizontalAlignment="Left" Margin="375,234,0,0" VerticalAlignment="Top"/>
-        <Label Content="Registerd mobile" HorizontalAlignment="Left" Margin="375,263,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="txt_userId" HorizontalAlignment="Left" Height="23" Margin="510,91,0,0"   VerticalAlignment="Top" Width="290"/>
-        <Label x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="510,122,0,0"  VerticalAlignment="Top" Width="290"/>
-        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="23" Margin="510,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290"/>
-        <Label x:Name="txt_role" HorizontalAlignment="Left" Height="23" Margin="510,235,0,0" VerticalAlignment="Top" Width="290"/>
-        <Label x:Name="txt_FCM_token" HorizontalAlignment="Left" Height="23" Margin="510,263,0,0"  VerticalAlignment="Top" Width="290"/>
-        <Label Content="name" HorizontalAlignment="Left" Margin="375,177,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="23" Margin="510,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290"/>
-        <Label Content="password" HorizontalAlignment="Left" Margin="375,149,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="510,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
-
-
+        <Grid HorizontalAlignment="Left" Height="446" Margin="188,-2,0,0" VerticalAlignment="Top" Width="814">
+            <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="366,291,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.5,0.5" Height="41" Click="Btn_Save_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.149"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Label Foreground="White"  Content="Id" HorizontalAlignment="Left" Margin="207,57,0,0" VerticalAlignment="Top"/>
+            <Label Foreground="White"  Content="UserName" HorizontalAlignment="Left" Margin="207,87,0,0" VerticalAlignment="Top" Height="25"/>
+            <Label Foreground="White"  Content="Email" HorizontalAlignment="Left" Margin="207,172,0,0" VerticalAlignment="Top"/>
+            <Label Foreground="White" Content="Role" HorizontalAlignment="Left" Margin="207,202,0,0" VerticalAlignment="Top"/>
+            <Label Foreground="White" Content="Registerd mobile" HorizontalAlignment="Left" Margin="207,231,0,0" VerticalAlignment="Top"/>
+            <Label Foreground="White" x:Name="txt_userId" HorizontalAlignment="Left" Height="23" Margin="332,59,0,0"   VerticalAlignment="Top" Width="290"/>
+            <Label Foreground="White" x:Name="txt_username" HorizontalAlignment="Left" Height="23" Margin="332,87,0,0"  VerticalAlignment="Top" Width="290"/>
+            <TextBox Foreground="White" x:Name="txt_email" HorizontalAlignment="Left" Height="23" Margin="332,172,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290"/>
+            <Label Foreground="White" x:Name="txt_role" HorizontalAlignment="Left" Height="23" Margin="332,202,0,0" VerticalAlignment="Top" Width="290"/>
+            <Label Foreground="White" x:Name="txt_FCM_token" HorizontalAlignment="Left" Height="23" Margin="332,232,0,0"  VerticalAlignment="Top" Width="290"/>
+            <Label Foreground="White" Content="Name" HorizontalAlignment="Left" Margin="207,146,0,0" VerticalAlignment="Top"/>
+            <TextBox Foreground="White" x:Name="txt_name" HorizontalAlignment="Left" Height="23" Margin="332,144,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290"/>
+            <Label Foreground="White" Content="Password" HorizontalAlignment="Left" Margin="207,116,0,0" VerticalAlignment="Top"/>
+            <TextBox Foreground="White" x:Name="txt_password" HorizontalAlignment="Left" Height="23" Margin="332,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
+        </Grid>
     </Grid>
 
 </Page>

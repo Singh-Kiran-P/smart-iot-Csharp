@@ -28,7 +28,7 @@ namespace Smartiot.Process.Auth
         //public string succes = "";
         //public static string error = "";
         public static List<login_response> user_info = new List<login_response>();
-         public static login_response response;
+        public static login_response response;
 
         public Login_process()
         {
@@ -45,7 +45,7 @@ namespace Smartiot.Process.Auth
                 var request = new Request();
                 var loginModel = new login_request { username = usernaam, password = password };
 
-                 response = (login_response)request.Execute<login_response>(Rest_API.serverurl + "/api/users/login", loginModel, "POST");
+                response = (login_response)request.Execute<login_response>(Rest_API.serverurl + "/api/users/login", loginModel, "POST");
 
                 if (response.status != 200)
                 {
@@ -78,7 +78,7 @@ namespace Smartiot.Process.Auth
                         Mainpage_normaal UI_mainpage = new Mainpage_normaal();
                         UI_mainpage.Show();
                     }
-                   
+
                 }
                 return;
 

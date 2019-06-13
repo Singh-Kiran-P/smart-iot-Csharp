@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Smartiot.Models.Users.ShowLogs;
+using Smartiot.Process.User;
 
 namespace Smartiot.Views.UI.Users.NormalUsers
 {
@@ -23,6 +25,17 @@ namespace Smartiot.Views.UI.Users.NormalUsers
         public Logs()
         {
             InitializeComponent();
+            var data = Process.Auth.Login_process.user_info;
+            var userId = data[0].id;
+            lbl_userId.Content = userId;
+            lbl_userName.Content = data[0].name;
+            ShowLogs_process showLogs_Process = new ShowLogs_process(userId);
+
+
+            List<showLogs_response> logsLijst = ShowLogs_process.logsLijst;
+
+            logsLijst.ForEach(item => list_logs.Items.Add(item));
+
         }
     }
 }

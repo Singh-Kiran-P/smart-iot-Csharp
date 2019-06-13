@@ -4,16 +4,29 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Smartiot.Views.UI.Users.NormalUsers"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Iot" Background="White">
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Title="Iot"      Background="#232228"
+      Foreground="White"
+Width="1093.6" Height="600">
 
 
     <Grid Margin="233,0,0,0">
-        <ToggleButton x:Name="toggle" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="372,0,0,401.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
-
-        <Label Content="Led01" HorizontalAlignment="Left" Margin="167,85,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
-        <Label Content="Temperature" HorizontalAlignment="Left" Margin="168,145,0,0" VerticalAlignment="Top" Height="44" Width="128"/>
-        <Label Content="Humidity" HorizontalAlignment="Left" Margin="172,195,0,0" VerticalAlignment="Top" Height="44" Width="99"/>
+        <Grid HorizontalAlignment="Left" Height="598" Margin="25,2,0,0" VerticalAlignment="Top" Width="835">
+            <Label Foreground="White" Content="Temperature" HorizontalAlignment="Left" Margin="578,439,0,0" VerticalAlignment="Top" Height="44" Width="128"/>
+            <Label Foreground="White" Content="Humidity" HorizontalAlignment="Left" Margin="171,439,0,0" VerticalAlignment="Top" Height="44" Width="99" RenderTransformOrigin="0.507,2.141"/>
+            <Label Foreground="White" x:Name="Lights" Content="Lights" HorizontalAlignment="Left" Margin="172,29,0,0" VerticalAlignment="Top" Height="36" Width="83" FontSize="20" FontWeight="Bold"/>
+            <ToggleButton x:Name="toggle_Copy3" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="422,276,0,279.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
+            <Label Foreground="White" Content="Fan 1" HorizontalAlignment="Left" Margin="371,284,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
+            <ToggleButton x:Name="toggle" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="233,65,0,490.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
+            <Label Foreground="White" Content="Room 1" HorizontalAlignment="Left" Margin="177,74,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
+            <ToggleButton x:Name="toggle_Copy" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="555,64,0,494.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
+            <Label Foreground="White" Content="Room 2" HorizontalAlignment="Left" Margin="386,74,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
+            <ToggleButton  x:Name="toggle_Copy1" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="233,144,0,412.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
+            <Label Foreground="White"  Content="Room 3" HorizontalAlignment="Left" Margin="177,153,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
+            <ToggleButton x:Name="toggle_Copy2" Checked = "HandleChecked" Unchecked = "HandleUnChecked" Margin="555,143,0,416.6"  HorizontalAlignment="Left" IsChecked="False" RenderTransformOrigin="0.674,0.308" Width="118" IsEnabledChanged="led01"/>
+            <Label Foreground="White" Content="Room 4" HorizontalAlignment="Left" Margin="386,153,0,0" VerticalAlignment="Top" Height="44" Width="69"/>
+            
+        </Grid>
     </Grid>
 </Page>
