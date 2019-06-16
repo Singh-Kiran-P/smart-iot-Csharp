@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Smartiot.Process.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Smartiot.Views.UI.Users.NormalUsers
         public Feedback()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Send_Click(object sender, RoutedEventArgs e)
+        {
+            var data = Process.Auth.Login_process.user_info;
+            string userId = data[0].id;
+            new SendFeedback_process(userId, txt_feedback.Text);
         }
     }
 }

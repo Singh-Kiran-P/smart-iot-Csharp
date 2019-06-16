@@ -108,9 +108,12 @@
     <Compile Include="Models\Iot\Led\led_response.cs" />
     <Compile Include="Models\Users\EditUser\editUser_request.cs" />
     <Compile Include="Models\Users\EditUser\editUser_response.cs" />
+    <Compile Include="Models\Users\Feedback\sendFeedback_request.cs" />
+    <Compile Include="Models\Users\Feedback\sendFeedback_response.cs" />
     <Compile Include="Models\Users\ShowLogs\showLogs_request.cs" />
     <Compile Include="Models\Users\ShowLogs\showLogs_response.cs" />
     <Compile Include="Process\User\EditUserInfo_process.cs" />
+    <Compile Include="Process\User\SendFeedback_process.cs" />
     <Compile Include="Process\User\ShowLogs_process.cs" />
     <Compile Include="Server\Rest_API.cs" />
     <Compile Include="Views\Auth\Login\login_form.xaml.cs">
